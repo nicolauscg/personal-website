@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  >.container {
+    flex: 1 0 auto
+  }
+  >footer {
+    flex-shrink: 0;
+  }
+}
+
+.footer {
+  padding: 0.5rem 1.5rem 2rem;
+  border-top: 1px solid $black;
+}
+
+.copyleft {
+  display:inline-block;
+  transform: rotate(180deg);
+}
+
+.footer img {
+  height: 50px;
+  vertical-align: text-top;
+  border: 1px solid transparent;
+  &:hover {
+    border: 1px solid $black;
+  }
+}

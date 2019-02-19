@@ -1,15 +1,21 @@
-<h1>contact page</h1>
-<h2>comments</h2>
-<form action="/submit/" method="post">
-  {% csrf_token %}
-  {{ form }}
-  <input type="submit" value="Submit">
-</form>
-<ul>
-  {% for comment in comments %}
-    <li>
-      <h3>{{ comment.author }}</h3>
-      <p>{{ comment.message }}</p>
-    </li>
-  {% endfor %}
-</ul>
+{% extends '_layout.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>contact page</h1>
+  <h2>comments</h2>
+  <form action="/submit/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+  </form>
+  <ul>
+    {% for comment in comments %}
+      <li>
+        <h3>{{ comment.author }}</h3>
+        <p>{{ comment.message }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
