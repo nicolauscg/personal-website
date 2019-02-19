@@ -11,6 +11,14 @@ gunicorn = "==19.9.0"
 dj-database-url = "==0.5.0"
 psycopg2 = "==2.7.7"
 whitenoise = "==4.1.2"
+django-libsass = "==0.7"
+rcssmin = "==1.0.6"
+django-appconf = "==1.0.2"
+libsass = "==0.17.0"
+rjsmin = "==1.0.12"
+six = "==1.12.0"
+django_compressor = "==2.2"
+django-sass-processor = "==0.7.2"
 
 [dev-packages]
 
