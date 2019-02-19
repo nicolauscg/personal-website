@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/django,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=django,visualstudiocode
+# Created by https://www.gitignore.io/api/sass,django,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=sass,django,visualstudiocode
 
 ### Django ###
 *.log
@@ -128,6 +128,12 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -139,4 +145,4 @@ dmypy.json
 # Ignore all local history of files
 .history
 
-# End of https://www.gitignore.io/api/django,visualstudiocode
+# End of https://www.gitignore.io/api/sass,django,visualstudiocode
