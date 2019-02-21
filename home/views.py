@@ -11,7 +11,7 @@ def about(request):
 
 def contact(request):
   context = {
-    'comments': Comment.objects.all(), 
+    'comments': Comment.objects.all().order_by('-id'), 
     'form': CommentForm()
   }
   return render(request, 'contact.html', context)

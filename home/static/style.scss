@@ -7,6 +7,8 @@ $white: #fff;
 
 @import 'css_partials/navbar';
 @import 'css_partials/footer';
+@import 'css_partials/utility';
+@import 'css_partials/components';
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -14,6 +16,8 @@ body {
 
 .heading {
   font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  margin-block-start: 0;
 }
 
 .container {
@@ -27,120 +31,60 @@ body {
   }
 }
 
-
-.card {
-  background-color: $black;
-  color: $white;
-  width: fit-content;
-  padding: 1rem;
-}
-
-.card__small-text {
-  border-bottom: 1px solid $white;
-  padding-bottom: 1rem;
-  margin-block-end: 0; 
-}
-
-.card__large-text {
-  margin-block-start: 0; 
-  text-transform: uppercase;
-  font-size: 5rem;
-  position: relative;
-  
-  @media screen and (max-width: $tablet) {
-    font-size: 3rem;
-  }
-}
-
-.flex-align-self-center {
-  align-self: center;
-}
-
-.hero {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 3rem 1.5rem;
-}
-
 section {
   padding-bottom: 3rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid $black;
+  display: flex;
+  flex-direction: column;
 }
 
 section:first-of-type {
   margin-top: 3rem;
 }
 
-section:last-of-type {
-  border-bottom: none;
-}
-
-.quote {
-  position: relative;
-  border: 1px solid $black;
-  padding: 3rem;
-  font-size: 1.5rem;
-}
-
-.quote__head {
-  width: fit-content;
-  position: absolute;
-  top: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  background-color: $white;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.outlined-button {
-  float: right;
+.button {
   background-color: $black;
   color: $white;
   border: 1px solid $black;
-  padding: 0.5rem;
-  position: absolute;
-  bottom: -1px;
-  right: -1px;
+  padding: 0.5rem 1.5rem;
+  transition: background .2s, border .2s;
+
+  > a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: $white;
     color: $black;
   }
 }
 
-.outlined-button__link {
-  color: inherit;
-  text-decoration: none;
-}
+.enlarge-on-hover {
+  transition: transform 0.5s, border .5s;
+  z-index: 1;
 
-.level {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  @media screen and (max-width: $tablet) {
-    display: block;
+  &:hover {
+    transform: scale(1.2);
+    border-color: $black;
+    background-color: $white;
+    z-index: 2;
   }
 }
 
-.level__left {
+.hidden-on-tablet {
   @media screen and (max-width: $tablet) {
-    margin-bottom: 1rem;
+    display: none !important;
   }
 }
 
-.level__right {
+.icon {
+  height: 80px;
+  width: 80px;
 }
 
-.is-flex {
-  align-items: flex-end;
-  display: flex;
-}
-
-.flex-direction-column {
-  flex-direction: column;
+.title-thin {
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
 }

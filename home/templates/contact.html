@@ -1,21 +1,60 @@
 {% extends '_layout.html' %}
-
+{% load static %}
 {% block content %}
 <div class="container">
-  <h1>contact page</h1>
-  <h2>comments</h2>
-  <form action="/submit/" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-  </form>
-  <ul>
-    {% for comment in comments %}
-      <li>
-        <h3>{{ comment.author }}</h3>
-        <p>{{ comment.message }}</p>
-      </li>
-    {% endfor %}
-  </ul>
+  <section>
+    <div class="quote">
+      <div class="quote__head">
+        want to get in touch?
+      </div>
+      <div class="quote__content">
+        <div class="boxes">
+          <div class="boxes__box enlarge-on-hover">
+            <div class="boxes__box-heading"><img class="icon" src="{% static 'images/github.png' %}"></div>
+            <div class="boxes__box-footer">view code</div> 
+          </div>
+          <div class="boxes__box enlarge-on-hover">
+            <div class="boxes__box-heading"><img class="icon" src="{% static 'images/linkedin.png' %}"></div>
+            <div class="boxes__box-footer">increase connection</div> 
+          </div>
+          <div class="boxes__box enlarge-on-hover">
+            <div class="boxes__box-heading"><img class="icon" src="{% static 'images/email.png' %}"></div>
+            <div class="boxes__box-footer">write a letter</div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="title-with-line-on-side">
+      <span class="title-with-line-on-side__text">or</span>
+    </div>
+    <h1 class="title-thin is-inline-block flex-align-self-center has-text-center typewriter">
+      have something on your mind?<br>just share your thoughts here!
+    </h1>
+    <form action="/submit/" method="post" class="form">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <div class="form__field">
+        {{ form.author.errors }}
+        <label for="{{ form.author.id_for_label }}">I am</label>
+        {{ form.author }}
+      </div>
+      <div class="form__field">
+        {{ form.message.errors }}
+        <label for="{{ form.message.id_for_label }}">and..</label>
+        {{ form.message }}
+      </div>
+      <input class="form__submit button" type="submit" value="Submit">
+    </form>
+    <div class="message-board">
+      {% for comment in comments %}
+      <div class="message-board__message">
+        <div class="message-board__content">{{ comment.message }}</div>
+        <div class="message-board__author">~ {{ comment.author }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 </div>
 {% endblock %}

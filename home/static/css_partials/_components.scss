@@ -1,0 +1,375 @@
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero__content {
+  align-self: center;
+  background-color: $black;
+  color: $white;
+  width: fit-content;
+  padding: 1rem;
+}
+
+.hero__small-text {
+  border-bottom: 1px solid $white;
+  padding-bottom: 1rem;
+  margin-block-end: 0; 
+}
+
+.hero__large-text {
+  margin-block-start: 0; 
+  text-transform: uppercase;
+  font-size: 5rem;
+  position: relative;
+  
+  @media screen and (max-width: $tablet) {
+    font-size: 3rem;
+  }
+}
+
+.title-with-line-on-side {
+  line-height: 0.5;
+  text-align: center;
+  position: relative;
+}
+
+.title-with-line-on-side__text {
+  display: inline-block;
+  position: relative;  
+  background-color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.title-with-line-on-side:before {
+  content: "";
+  position: absolute;
+  height: 0.5rem;
+  border-bottom: 1px solid black;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.card {
+  background-color: $black;
+  color: $white;
+  width: fit-content;
+  padding: 1rem;
+}
+
+.card--colour-invert {
+  background-color: $white;
+  color: $black;
+  border: 1px solid $black;
+}
+
+.card--about {
+  width: inherit;
+  align-items: stretch;
+  padding: 0;
+
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
+}
+
+.card__top-left-header, .card__bottom-right-footer {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $black;
+  color: $white;
+  padding: 1rem;
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
+}
+.card__top-left-header {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.card__middle-content {
+  margin: 2rem 3rem;
+  font-size: 1.25rem;
+
+  @media screen and (max-width: $tablet) {
+    margin: 2rem 1.5rem;
+  }
+
+  > p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+}
+
+.card__bottom-right-footer {
+}
+
+.boxes {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
+}
+
+.boxes__box {
+  border: 1px solid $white;
+  margin-right: 1rem;
+  width: fit-content;
+  // height: 5rem;
+  height: fit-content;
+  padding: 0.5rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: $tablet) {
+    width: auto;
+    margin: 0;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.boxes__box-heading {
+  font-size: 3rem;
+
+  @media screen and (max-width: $tablet) {
+    text-align: center;
+  }
+}
+
+.boxes__box-footer {
+  text-align: right;
+  padding-left: 1rem;
+
+  @media screen and (max-width: $tablet) {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+.quote {
+  position: relative;
+  border: 1px solid $black;
+  padding: 3rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote__head {
+  font-family: 'Montserrat', sans-serif;
+  width: fit-content;
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  background-color: $white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.quote_footer {
+  font-size: 1.5rem;
+}
+
+.level {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
+}
+
+.level__left {
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 1rem;
+  }
+}
+
+.level__right {
+}
+
+.grid {
+  width: 100%;
+}
+
+.grid__item {
+  width: 33%; 
+  display: inline-block;
+
+  @media screen and (max-width: $tablet) {
+    width: 49%;
+  }
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.skill-card__header {
+  font-size: 2rem;
+  padding: 1rem 0.5rem 0;
+  border-bottom: 2px solid black;
+  font-style: italic;
+}
+
+.skill-card__content {
+  width: 70%;
+  align-self: flex-end;
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+
+  @media screen and (max-width: $tablet) {
+    width: 90%;
+  }
+}
+
+.media {
+  display: flex;
+}
+
+.media__left {
+  order: 1;
+  border-right: 2px solid $black;
+  padding-right: 1rem;
+  max-width: 30%;
+}
+
+.media__content {
+  padding-left: 1rem;
+  order: 2;
+  flex-grow: 1;
+
+  > h1 {
+    margin-block-start: 0;
+  }
+}
+
+.picture {
+  position: relative;
+}
+
+.picture > figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.picture__date-box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem; 
+  height: 4rem; 
+  padding: 0.25rem;
+  text-align: center;
+  background-color: $black;
+  color: $white;
+  z-index: 2;
+
+  @media screen and (max-width: $tablet) {
+    position: relative
+  }
+}
+
+.picture__date-month {
+  order: 1;
+  font-size: 2rem;
+  flex-grow: 1;
+}
+
+.picture__date-year {
+  order: 2;
+}
+
+
+.form {
+  width: 25rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.form__field {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__text-input {
+  border: none;
+  border-bottom: 1px solid $black;
+  width: 100%;
+}
+
+.form__text-area {
+  width: 100%;
+  border: 1px solid $black;
+}
+
+.form__submit {
+  align-self: center;
+}
+
+.message-board {
+  width: 25rem;
+  max-width: 100%;
+  align-self: center;
+}
+
+.message-board__message {
+  margin-bottom: 1rem;
+  border-left: 3px solid $black;
+  padding: 20px 50px;
+  text-align: left;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:nth-child(even) {
+    border-left: none;
+    border-right: 3px solid $black;
+    text-align: right;
+  }
+}
+
+.message-board__content {
+  font-size: 1.25rem;
+}
+
+.message-board__author {
+}

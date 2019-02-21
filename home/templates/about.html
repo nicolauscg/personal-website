@@ -1,7 +1,109 @@
 {% extends '_layout.html' %}
-
+{% load static %}
 {% block content %}
 <div class="container">
-  <h1>about page</h1>
+  <section>
+    <div class="title-with-line-on-side">
+      <span class="title-with-line-on-side__text">about</span>
+    </div>
+    <div class="card card--about card--colour-invert is-flex flex-direction-column">
+      <span class="card__top-left-header flex-align-self-flex-start">
+        nicolaus christian gozali
+      </span>
+      <div class="card__middle-content">
+        <p>I am currently a second year student in University of Indonesia. I am highly driven in 
+        pursuing software engineering as well as data science, and I try to write readable, 
+        mantainable and efficient code.</p>
+        <p>I come from Jakarta. Travelling to and fro between Depok and Jakarta since university. 
+        Now I am working on a few personal projects while bustling through classes and volunteer 
+        work in campus. Aside from programming, I am also enthusiastic about video games since child.</p>
+      </div>
+      <span class="card__bottom-right-footer flex-align-self-flex-end">
+        <div class="boxes">
+          <div class="boxes__box">
+            <div class="boxes__box-heading scramble-number">12</div>
+            <div class="boxes__box-footer">hours on this site</div> 
+          </div>
+          <div class="boxes__box">
+            <div class="boxes__box-heading scramble-number">2000</div>
+            <div class="boxes__box-footer">year of birth</div> 
+          </div>
+          <div class="boxes__box">
+            <div class="boxes__box-heading scramble-number">2037</div>
+            <div class="boxes__box-footer">hours into dota</div> 
+          </div>
+        </div>
+      </span>
+    </div>
+  </section>
+  <section>
+    <div class="title-with-line-on-side">
+      <span class="title-with-line-on-side__text">skills</span>
+    </div>
+    <div class="grid">
+      <div class="grid__item">
+        <div class="skill-card">
+          <div class="skill-card__header">
+            django
+          </div>
+          <div class="skill-card__content">
+            took web design and programming already, duh
+          </div>
+        </div>
+      </div>
+      <div class="grid__item">
+        <div class="skill-card">
+          <div class="skill-card__header">
+            sass
+          </div>
+          <div class="skill-card__content">
+            used in personal blog, split css into partials, reduce duplication, also learnt naming convention and concept of modular css
+          </div>
+        </div>
+      </div>
+      <div class="grid__item">
+        <div class="skill-card">
+          <div class="skill-card__header">
+            gulp
+          </div>
+          <div class="skill-card__content">
+            a task runner to automate stuff like building css, js, processing images on change!
+          </div>
+        </div>
+      </div>
+      <div class="grid__item">
+        <div class="skill-card">
+          <div class="skill-card__header">
+            rails
+          </div>
+          <div class="skill-card__content">
+            learnt and built rails API during compfest camp
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="title-with-line-on-side">
+      <span class="title-with-line-on-side__text">experience</span>
+    </div>
+    <div class="media">
+      <div class="media__left">
+        <div class="picture">
+          <figure class="picture__image hidden-on-tablet">
+            <img src="{% static 'images/cfx.jpeg' %}">
+          </figure>
+          <div class="picture__date-box">
+            <div class="picture__date-month">Jan</div>
+            <div class="picture__date-year">2018</div>
+          </div>
+        </div>
+      </div>
+      <div class="media__content">
+        <h2 class="heading">GoJek x Compfest software engineering camp</h2>
+        <p>A 6 day camp over 4 weeks with 19 other brilliant students taught directly by engineers from GoJek. Learnt a thing or two about rails, clean code, TDD, devops, engineering cultures, microservices and many more!</p>
+      </div>
+    </div>
+  </section>
 </div>
 {% endblock %}
