@@ -10,17 +10,17 @@ $(document).ready(function() {
 
   typewriter($('.typewriter'));
 
-  
-  function movingText(selector, attributes) {
-    selector.each(function(element) {
-      var window =  $(window);
-      var windowWidth = window.width();
-      var windowHeight = window.height();
+
+  function movingText(selector, attributes={}) {
+    selector.each(function() {
+      var element = this;
+      var windowWidth = $(window).width();
+      var windowHeight = $(window).height();
       var factor = attributes["factor"] ? attributes["factor"] : 100;
       // adjust top and left values depending on mouse position
-      window.mousemove(function(event) {
-        element.css('top', (windowHeight/2 - event.pageY)/factor );
-        element.css('left', (windowWidth/2 - event.pageX)/factor );
+      $(window).mousemove(function(event) {
+        element.style.top = (windowHeight/2 - event.pageY)/factor + 'px';
+        element.style.left = (windowWidth/2 - event.pageX)/factor + 'px';
       });
     });
   }
@@ -63,7 +63,7 @@ $(document).ready(function() {
   }
 
   function typewriter(selector, attributes={}) {
-    var speed = attributes["interval"] ? attributes["interval"] : 40;
+    var interval = attributes["interval"] ? attributes["interval"] : 40;
 
     $.each(selector, function() {
       var element = this;
