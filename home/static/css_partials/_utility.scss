@@ -29,3 +29,27 @@
 .has-text-center {
   text-align: center;
 }
+
+.enlarge-on-hover {
+  transition: transform 0.5s, border .5s;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.2);
+    border-color: $black;
+    background-color: $white;
+    z-index: 3;
+  }
+}
+
+.hidden-on-tablet {
+  @media screen and (max-width: $tablet) {
+    display: none !important;
+  }
+}
+
+.title-thin {
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+}

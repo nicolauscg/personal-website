@@ -1,0 +1,24 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  min-height: 100%;
+  position: relative;
+}
+
+section {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+section:first-of-type {
+  margin-top: 3rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

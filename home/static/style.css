@@ -82,10 +82,6 @@
   top: 18px;
   transform: rotate(-135deg); }
 
-html, body {
-  min-height: 100%;
-  position: relative; }
-
 body {
   display: flex;
   flex-direction: column; }
@@ -132,6 +128,24 @@ body {
 
 .has-text-center {
   text-align: center; }
+
+.enlarge-on-hover {
+  transition: transform 0.5s, border .5s;
+  z-index: 1; }
+  .enlarge-on-hover:hover {
+    transform: scale(1.2);
+    border-color: #000;
+    background-color: #fff;
+    z-index: 3; }
+
+@media screen and (max-width: 1023px) {
+  .hidden-on-tablet {
+    display: none !important; } }
+
+.title-thin {
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif; }
 
 .hero {
   align-items: stretch;
@@ -430,9 +444,6 @@ body {
 .message-board__content {
   font-size: 1.25rem; }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
 .heading {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
@@ -447,6 +458,27 @@ body {
     .container {
       width: calc(100% - 1rem) !important; } }
 
+.button {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 0.5rem 1.5rem;
+  transition: background .2s, border .2s; }
+  .button:hover {
+    background-color: #fff;
+    color: #000; }
+
+.icon {
+  height: 80px;
+  width: 80px; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+html, body {
+  min-height: 100%;
+  position: relative; }
+
 section {
   padding-bottom: 3rem;
   margin-bottom: 3rem;
@@ -459,37 +491,5 @@ section:first-of-type {
 a {
   color: inherit;
   text-decoration: none; }
-
-.button {
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #000;
-  padding: 0.5rem 1.5rem;
-  transition: background .2s, border .2s; }
-  .button:hover {
-    background-color: #fff;
-    color: #000; }
-
-.enlarge-on-hover {
-  transition: transform 0.5s, border .5s;
-  z-index: 1; }
-  .enlarge-on-hover:hover {
-    transform: scale(1.2);
-    border-color: #000;
-    background-color: #fff;
-    z-index: 3; }
-
-@media screen and (max-width: 1023px) {
-  .hidden-on-tablet {
-    display: none !important; } }
-
-.icon {
-  height: 80px;
-  width: 80px; }
-
-.title-thin {
-  font-size: 2rem;
-  font-weight: normal;
-  font-family: 'Montserrat', sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
